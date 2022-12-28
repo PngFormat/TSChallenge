@@ -3,6 +3,7 @@ interface Todo {
     description: string
 }
 
+// @ts-ignore
 const todo: MyReadonly<Todo> = {
     title: "Hey",
     description: "foobar"

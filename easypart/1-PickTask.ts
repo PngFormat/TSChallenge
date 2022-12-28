@@ -6,6 +6,7 @@ interface Todo {
 
 type TodoPreview = MyPick<Todo, 'title' | 'completed'>
 
+// @ts-ignore
 const todo: TodoPreview = {
     title: 'Clean room',
     completed: false,
