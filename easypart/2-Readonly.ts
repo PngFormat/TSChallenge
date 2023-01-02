@@ -3,16 +3,14 @@ interface Todo {
     description: string
 }
 
-// @ts-ignore
-const todo: MyReadonly<Todo> = {
+const test1: MyReadonly<Todo> = {
     title: "Hey",
     description: "foobar"
 }
-// add modificator readonly in type
+
 type MyReadonly<T> = {
-    readonly title: string
-    readonly description: string
+    readonly [field in keyof T]: T[field]
 }
 
-// todo.title = "Hello" // Error: cannot reassign a readonly property
-// todo.description = "barFoo" // Error: cannot reassign a readonly property
+// test1.title = "Hello" // Error: cannot reassign a readonly property
+// test1.description = "barFoo" // Error: cannot reassign a readonly property
