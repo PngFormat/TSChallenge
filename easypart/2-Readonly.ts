@@ -3,7 +3,7 @@ interface Todo {
     description: string
 }
 
-const test1: MyReadonly<Todo> = {
+const test5: MyReadonly<Todo> = {
     title: "Hey",
     description: "foobar"
 }
